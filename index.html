@@ -398,29 +398,121 @@
         </section>
 
         <section
-          class="w-full aboslute bg-gray-100 bg-opacity-900 flex justify-center items-center mx-auto">
+          class="w-full bg-gray-100 flex justify-center items-center mx-auto">
           <div
             class="w-full grid lg:grid-cols-2 grid-cols-1 justify-center items-center">
             <div
-              class="relative bg-[url('https://www.coderxpoint.com/static/media/cxp-world-image.21f79260009516267360.png')] bg-center bg-cover lg:h-screen h-[70vh] flex flex-col">
+              class="relative py-10 lg:h-screen h-[60vh] flex flex-col bg-center bg-cover bg-[url('https://www.coderxpoint.com/static/media/cxp-world-image.21f79260009516267360.png')]">
               <div
-                class="w-full items-center flex flex-col justify-center lg:px-30 px-4">
+                class="relative w-full items-center flex flex-col justify-center lg:px-30 px-4 z-10">
                 <span class="uppercase font-semibold text-slate-600 text-sm">
                   Global Footprint
                 </span>
-                <h1 class="text-4xl leading-tight text-slate-600">
-                  We're the Worlds's Immersion Cooling Authority
+                <h1 class="text-4xl leading-tight text-slate-600 text-center">
+                  We're the World's Immersion Cooling Authority
                 </h1>
               </div>
             </div>
-            <div class="w-full items-center flex flex-col justify-center px-10">
-              shrey
+
+            <div
+              class="w-full items-center py-10 flex flex-col justify-center px-10">
+              <h2 class="text-3xl font-semibold text-slate-700 mb-4">
+                Connect with out team to explore rhw optimal immersion liquid
+                cooling solutions for your organization
+              </h2>
+              <form
+                action=""
+                class="grid lg:grid-cols-2 grid-cols-1 gap-4 w-full max-w-md">
+                <div class="flex flex-col gap-2">
+                  <label for="enquiry-type" class="text-sm">Enquiry type</label>
+                  <select
+                    id="enquiry-type"
+                    name="enquiry-type"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full">
+                    <option value="">Select one</option>
+                    <option value="sales">Sales</option>
+                    <option value="support">Support</option>
+                    <option value="partnership">Partnership</option>
+                  </select>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label for="message" class="text-sm">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full"
+                    rows="1"></textarea>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="f_name" class="text-sm">First Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="f_name"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="l_name" class="text-sm">last Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="l_name"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="email" class="text-sm">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="phone" class="text-sm"
+                    >Where do you here us?</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full" />
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="country" class="text-sm">Country</label>
+                  <select
+                    id="country"
+                    name="country"
+                    class="bg-white border-2 border-gray-300 rounded-md p-2 w-full">
+                    <option value="">Select one</option>
+                    <option value="IN">India</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                  </select>
+                </div>
+                <div class="flex items-center gap-2">
+                  <label for="insights" class="text-sm"
+                    >I am intretsedin insites</label
+                  >
+                  <input
+                    type="checkbox"
+                    id="insights"
+                    name="insights"
+                    class="bg-white border-2 border-gray-300" />
+                </div>
+              </form>
+              <button
+                class="text-white bg-green-400 hover:bg-green-500 text-sm font-semibold rounded-md px-4 py-2 w-auto mt-4">
+                Submit
+              </button>
             </div>
           </div>
         </section>
       </div>
 
-      <footer>footer</footer>
+      <footer class="bg-slate-900 w-full px-4 flex justify-center items-center text-white">
+        <div class="max-w-6xl w-full justify-center items-center ">shrey</div>
+      </footer>
     </main>
   </body>
   <script src="/script.js"></script>
