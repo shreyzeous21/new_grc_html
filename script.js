@@ -120,24 +120,44 @@ window.addEventListener("resize", updateProducts);
 
 
 
-const slides = document.querySelectorAll(".slide");
-let currentIndex1 = 0;
+const slides = document.querySelectorAll('.slide');
+    let currentIndex1 = 0;
 
-const showSlide = (index) => {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    if (i === index) {
-      slide.classList.add("active");
-    }
-  });
-};
+    // Show the current slide with fade animation
+    const showSlide = (index) => {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+          slide.classList.remove('inactive');
+        } else {
+          slide.classList.remove('active');
+          slide.classList.add('inactive');
+        }
+      });
+    };
 
-document.getElementById("prev").addEventListener("click", () => {
-  currentIndex1 = (currentIndex1 - 1 + slides.length) % slides.length;
-  showSlide(currentIndex1);
-});
+    // Move to the next slide
+    const nextSlide = () => {
+      currentIndex1 = (currentIndex1 + 1) % slides.length;
+      showSlide(currentIndex1);
+    };
 
-document.getElementById("next").addEventListener("click", () => {
-  currentIndex1 = (currentIndex1 + 1) % slides.length;
-  showSlide(currentIndex1);
-});
+    // Move to the previous slide
+    const prevSlide = () => {
+      currentIndex1 = (currentIndex1 - 1 + slides.length) % slides.length;
+      showSlide(currentIndex1);
+    };
+
+    // Set up automatic slider
+    const autoSlide = () => {
+      setInterval(() => {
+        nextSlide();
+      }, 5000); // Change slide every 5 seconds
+    };
+
+    // Event listeners for navigation buttons
+    document.getElementById('prev').addEventListener('click', prevSlide);
+    document.getElementById('next').addEventListener('click', nextSlide);
+
+    // Start the automatic slider
+    autoSlide();

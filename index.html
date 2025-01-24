@@ -156,10 +156,11 @@
 
       <div
         class="w-full mx-auto flex-col gap-10 jusitfy-ceter items-center flex">
-        <section class="relative w-full">
-          <!-- Slides -->
+
+        <!-- <section class="relative w-full">
+          
           <div id="slider" class="w-full">
-            <!-- Slide 1 -->
+           
             <section
               class="slide active w-full bg-[url('https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60')] lg:h-screen h-[50vh] bg-center bg-cover flex justify-center items-center px-4">
               <div
@@ -178,7 +179,7 @@
               </div>
             </section>
 
-            <!-- Slide 2 -->
+           
             <section
               class="slide w-full bg-[url('https://greenfactor.in/new-grc/assests/images/banner_one.jpg')] lg:h-screen h-[50vh] bg-center bg-cover flex justify-center items-center px-4">
               <div
@@ -198,7 +199,7 @@
             </section>
           </div>
 
-          <!-- Navigation -->
+        
           <button
             id="prev"
             class="absolute lg:right-20 right-20 lg:top-1/2 lg:bottom-60 bottom-0 transform -translate-y-1/2 text-white text-2xl bg-gray-700 rounded-full p-3 hover:bg-gray-600">
@@ -208,6 +209,103 @@
             id="next"
             class="absolute right-4 lg:top-1/2 lg:bottom-60 bottom-0 transform -translate-y-1/2 text-white text-2xl bg-gray-700 rounded-full p-3 hover:bg-gray-600">
             &rarr;
+          </button>
+        </section> -->
+
+        <section class="relative w-full h-[50vh] lg:h-screen">
+          <!-- Slider Container -->
+          <div id="slider" class="relative w-full h-full">
+            <!-- Slide 1 -->
+            <section
+              class="slide active bg-[url('https://greenfactor.in/new-grc/assests/images/banner_two.jpg')] bg-center bg-cover flex justify-center items-center px-4 h-full">
+              <div
+                class="flex flex-col gap-6 justify-center mx-auto items-start w-full max-w-6xl">
+                <span class="uppercase font-semibold text-white text-sm">
+                  Hyperscale Data Center
+                </span>
+                <h1
+                  class="text-4xl font-bold leading-tight text-white lg:w-1/3">
+                  Frustrated with your under-performing ITE, inefficient power
+                  use and increased cost?
+                </h1>
+                <span class="text-green-400 font-semibold text-sm">
+                  Check out our Cooling Solutions Today!
+                </span>
+              </div>
+            </section>
+
+            <!-- Slide 2 -->
+            <section
+              class="slide bg-[url('https://greenfactor.in/new-grc/assests/images/banner_one.jpg')] bg-center bg-cover flex justify-center items-center px-4 h-full">
+              <div
+                class="flex flex-col gap-6 justify-center mx-auto items-start w-full max-w-6xl">
+                <span class="uppercase font-semibold text-white text-sm">
+                  Innovative Data Center Cooling
+                </span>
+                <h1
+                  class="text-4xl font-bold leading-tight text-white lg:w-1/3">
+                  Maximize Efficiency with Our Advanced Liquid Cooling
+                  Solutions!
+                </h1>
+                <span class="text-green-400 font-semibold text-sm">
+                  Upgrade to the Best in AI/ML Performance Today!
+                </span>
+              </div>
+            </section>
+
+            <!-- Slide 3 -->
+            <section
+              class="slide bg-[url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=60')] bg-center bg-cover flex justify-center items-center px-4 h-full">
+              <div
+                class="flex flex-col gap-6 justify-center mx-auto items-start w-full max-w-6xl">
+                <span class="uppercase font-semibold text-white text-sm">
+                  Future-Proof Technology
+                </span>
+                <h1
+                  class="text-4xl font-bold leading-tight text-white lg:w-1/3">
+                  Discover Reliable Solutions for Your Data Centers!
+                </h1>
+                <span class="text-green-400 font-semibold text-sm">
+                  Contact Us Today for Custom Solutions!
+                </span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            id="prev"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 rounded-full p-3 hover:bg-gray-600">
+            <!-- SVG for left arrow -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            id="next"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 rounded-full p-3 hover:bg-gray-600">
+            <!-- SVG for right arrow -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </section>
 
