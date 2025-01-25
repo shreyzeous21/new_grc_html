@@ -18,23 +18,7 @@ const productData = [
     description:
       "Elit sequi iste, earum, nesciunt consequatur quam sed velit iure lorem ipsum dolor sit amet consectetur, adipisicing.",
     imageUrl:
-      "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "ICEflow",
-    subtitle: "Efficient Liquid Cooling Technology",
-    description:
-      "Consectetur adipisicing elit, sequi iste, earum, nesciunt consequatur quam sed velit iure lorem ipsum dolor sit amet.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "ICEflow",
-    subtitle: "Efficient Liquid Cooling Technology",
-    description:
-      "Consectetur adipisicing elit, sequi iste, earum, nesciunt consequatur quam sed velit iure lorem ipsum dolor sit amet.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
+      "/assets/",
   },
 ];
 
