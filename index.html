@@ -12,42 +12,13 @@
       referrerpolicy="no-referrer" />
     <link
       rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/style.css" />
 
     <title>New GRC</title>
-    <style>
-      body {
-        font-family: "Gotham", sans-serif;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .fade-in {
-        animation: fadeIn 0.5s ease-in-out;
-      }
-      .transition-transform {
-        transition: transform 0.5s ease-in-out;
-      }
-      .slide {
-        opacity: 0;
-        transition: opacity 1s ease-in-out; /* Smooth fade effect */
-        position: absolute;
-        inset: 0;
-      }
-
-      .active {
-        opacity: 1;
-        z-index: 10; /* Ensure active slide is on top */
-      }
-
-      .inactive {
-        z-index: 0;
-      }
-    </style>
   </head>
   <body>
     <main class="flex justify-center items-center flex-col w-full mx-auto">
@@ -55,9 +26,7 @@
         <div class="w-full items-center justify-center lg:px-0 px-4">
           <div class="flex flex-row justify-between items-center">
             <div class="lg:w-1/6 w-40 lg:py-0 lg:ml-30 py-4">
-              <img
-                src="/assets//grc-full-color-15-years-(1).jpg"
-                alt="" />
+              <img src="/assets//grc-full-color-15-years-(1).jpg" alt="" />
             </div>
 
             <!-- Mobile Menu Button -->
@@ -113,9 +82,7 @@
               <div class="flex flex-col h-full">
                 <div class="flex justify-between items-center p-4 border-b">
                   <div class="w-40">
-                    <img
-                      src="/assets/grc-full-color-15-years-(1).jpg"
-                      alt="" />
+                    <img src="/assets/grc-full-color-15-years-(1).jpg" alt="" />
                   </div>
                   <button class="text-2xl" onclick="toggleMobileMenu()">
                     <i class="fa-solid fa-xmark"></i>
@@ -171,6 +138,7 @@
 
       <div
         class="w-full mx-auto flex-col gap-0 jusitfy-ceter items-center flex">
+        
         <section class="relative w-full h-[50vh] lg:h-screen">
           <!-- Slider Container -->
           <div id="slider" class="relative w-full h-full">
@@ -449,7 +417,7 @@
           </div>
         </section>
 
-        <section
+        <!-- <section
           class="w-full bg-[#dddddd] py-10 px-4 justify-center items-center flex">
           <div class="max-w-6xl w-full justify-center items-center mx-auto">
             <div class="flex w-full items-start justify-center gap-5 flex-col">
@@ -507,7 +475,7 @@
                   </button>
                 </div>
 
-                <!-- <div class="flex flex-row gap-2">
+                <div class="flex flex-row gap-2">
                   <button>
                     <i
                       class="fa-solid fa-angles-left bg-gray-100 p-3 rounded-full cursor-pointer"></i>
@@ -516,7 +484,141 @@
                     <i
                       class="fa-solid fa-angles-right bg-gray-100 p-3 rounded-full cursor-pointer"></i>
                   </button>
-                </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+
+        <section class="bg-[#dddddd] w-full py-10">
+          <div class="mx-auto max-w-6xl px-4">
+            <div
+              class="mb-14 flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between max-sm:gap-8">
+              <div class="flex flex-col gap-4">
+                <span class="uppercase font-semibold text-slate-600 text-sm">
+                  Customer Trust Us
+                </span>
+                <h1 class="text-4xl leading-tight text-slate-600">
+                  Celebrating 15 Years of Immersion Cooling Authority
+                </h1>
+              </div>
+              <!-- Slider controls -->
+              <div class="flex items-center gap-8">
+                <button
+                  id="slider-button-left"
+                  class="swiper-button-prev group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+                  data-carousel-prev>
+                  <svg
+                    class="h-6 w-6 text-indigo-600 group-hover:text-white"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button
+                  id="slider-button-right"
+                  class="swiper-button-next group flex justify-center items-center border border-solid border-indigo-600 w-12 h-12 transition-all duration-500 rounded-full hover:bg-indigo-600"
+                  data-carousel-next>
+                  <svg
+                    class="h-6 w-6 text-indigo-600 group-hover:text-white"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!--Slider wrapper-->
+            <div
+              class="lg:flex grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide group bg-white border border-solid h-auto border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                  <div
+                  class="bg-white h-full w-full py-10 flex flex-col text-center gap-4 items-center justify-center">
+                  <img
+                    src="https://greenfactor.in/new-grc/cs-vsc-logo.jpg"
+                    alt=""
+                    class="h-auto w-40" />
+                  <p class="text-slate-600 text-sm w-50">
+                    “We are setting new standards here…where we can examine
+                    complex questions to an even better level, but also in terms
+                    of sustainability.”
+                  </p>
+                  <button class="text-green-600 cursor-pointer">
+                    View More
+                  </button>
+                </div>
+                </div>
+
+                <div
+                  class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                  <div
+                  class="bg-white h-full w-full py-10 lg:flex hidden flex-col text-center gap-4 items-center justify-center">
+                  <img
+                    src="https://greenfactor.in/new-grc/cs-tacc-logo.jpg"
+                    alt=""
+                    class="h-auto w-40" />
+                  <p class="text-slate-600 text-sm w-50">
+                    “We had limited space, power and cooling. GRC’s tech made it
+                    possible to add capacity in a storage area, while reducing
+                    power requirements by 30%.”
+                  </p>
+                  <button class="text-green-600 cursor-pointer">
+                    View More
+                  </button>
+                </div>
+                </div>
+
+                <div
+                  class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600">
+                 <div
+                  class="bg-white h-full w-full py-10 lg:flex hidden flex-col text-center gap-4 items-center justify-center">
+                  <img
+                    src="https://greenfactor.in/new-grc/cs-intel-logo.jpg"
+                    alt=""
+                    class="h-auto w-40" />
+                  <p class="text-slate-600 text-sm w-50">
+                    “We’ve proven to ourselves that they are efficient. It could
+                    mean that a higher clock speed is possible in an oil
+                    immersion installation.”
+                  </p>
+                  <button class="text-green-600 cursor-pointer">
+                    View More
+                  </button>
+                </div>
+                </div>
+                
+                <div
+                class="swiper-slide group bg-white border border-solid h-auto border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600">
+                <div
+                class="bg-white h-full w-full py-10 flex flex-col text-center gap-4 items-center justify-center">
+                <img
+                  src="https://greenfactor.in/new-grc/cs-vsc-logo.jpg"
+                  alt=""
+                  class="h-auto w-40" />
+                <p class="text-slate-600 text-sm w-50">
+                  “We are setting new standards here…where we can examine
+                  complex questions to an even better level, but also in terms
+                  of sustainability.”
+                </p>
+                <button class="text-green-600 cursor-pointer">
+                  View More
+                </button>
+              </div>
+              </div>
               </div>
             </div>
           </div>
@@ -843,13 +945,13 @@
               </div>
             </div>
           </div>
-          <p class="text-sm">
+          <p class="text-sm w-full max-w-6xl">
             GRC, Inc.: 11525 Stonehollow Dr., Ste. A-150, Austin, TX 78758,
             United States tel: +1.512.692.8003 ContactUs@grcooling.com
           </p>
           <div
             class="bg-blue-600 py-8 items-center mx-auto flex justify-center w-full">
-            <div class="max-w-6xl px-4 w-full flex justify-center items-center">
+            <div class="max-w-6xl  w-full ">
               <p class="text-sm">
                 © 2024 GRC, Green Revolution Cooling, and The Immersion Cooling
                 Authority are each registered trademarks of Green Revolution

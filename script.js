@@ -13,12 +13,19 @@ const productData = [
       "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "ICEcube",
+    title: "ICEtank",
+    subtitle: "Modular Liquid Immersion Cooling System",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi iste, earum, nesciunt consequatur quam sed velit iure",
+    imageUrl:
+      "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "ICEcubeweflkfweofhweiofhio",
     subtitle: "Advanced Cooling Solution",
     description:
       "Elit sequi iste, earum, nesciunt consequatur quam sed velit iure lorem ipsum dolor sit amet consectetur, adipisicing.",
-    imageUrl:
-      "/assets/",
+    imageUrl: "https://images.unsplash.com/photo-1735292626224-9cbee37fd0d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -102,46 +109,77 @@ updateProducts();
 
 window.addEventListener("resize", updateProducts);
 
+const slides = document.querySelectorAll(".slide");
+let currentIndex1 = 0;
+
+// Show the current slide with fade animation
+const showSlide = (index) => {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.add("active");
+      slide.classList.remove("inactive");
+    } else {
+      slide.classList.remove("active");
+      slide.classList.add("inactive");
+    }
+  });
+};
+
+// Move to the next slide
+const nextSlide1 = () => {
+  currentIndex1 = (currentIndex1 + 1) % slides.length;
+  showSlide(currentIndex1);
+};
+
+// Move to the previous slide
+const prevSlide1 = () => {
+  currentIndex1 = (currentIndex1 - 1 + slides.length) % slides.length;
+  showSlide(currentIndex1);
+};
+
+// Set up automatic slider
+const autoSlide = () => {
+  setInterval(() => {
+    nextSlide1();
+  }, 5000); // Change slide every 5 seconds
+};
+
+// Event listeners for navigation buttons
+document.getElementById("prev").addEventListener("click", prevSlide1);
+document.getElementById("next").addEventListener("click", nextSlide1);
+
+// Start the automatic slider
+autoSlide();
 
 
-const slides = document.querySelectorAll('.slide');
-    let currentIndex1 = 0;
 
-    // Show the current slide with fade animation
-    const showSlide = (index) => {
-      slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.classList.add('active');
-          slide.classList.remove('inactive');
-        } else {
-          slide.classList.remove('active');
-          slide.classList.add('inactive');
-        }
-      });
-    };
-
-    // Move to the next slide
-    const nextSlide = () => {
-      currentIndex1 = (currentIndex1 + 1) % slides.length;
-      showSlide(currentIndex1);
-    };
-
-    // Move to the previous slide
-    const prevSlide = () => {
-      currentIndex1 = (currentIndex1 - 1 + slides.length) % slides.length;
-      showSlide(currentIndex1);
-    };
-
-    // Set up automatic slider
-    const autoSlide = () => {
-      setInterval(() => {
-        nextSlide();
-      }, 5000); // Change slide every 5 seconds
-    };
-
-    // Event listeners for navigation buttons
-    document.getElementById('prev').addEventListener('click', prevSlide);
-    document.getElementById('next').addEventListener('click', nextSlide);
-
-    // Start the automatic slider
-    autoSlide();
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 28,
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+  },
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+      0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: false,
+      },
+      768: {
+          slidesPerView: 2,
+          spaceBetween: 28,
+          centeredSlides: true,
+      },
+      1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+      },
+  },
+});
